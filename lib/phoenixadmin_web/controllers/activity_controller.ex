@@ -5,7 +5,7 @@ defmodule PhoenixadminWeb.ActivityController do
   alias Phoenixadmin.Logging.Activity
 
   def index(conn, _params) do
-    activity = Logging.list_activity()
+    activity = Logging.get_last_x_activity(100)
     render(conn, "index.html", activity: activity)
   end
 

@@ -20,7 +20,7 @@ defmodule Phoenixadmin.Mixfile do
   def application do
     [
       mod: {Phoenixadmin.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :timex]
     ]
   end
 

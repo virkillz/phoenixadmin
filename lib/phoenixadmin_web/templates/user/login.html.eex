@@ -1,8 +1,9 @@
     
         <div class="wrapper-page">
             <div class="panel panel-color panel-primary panel-pages">
-                <div class="panel-heading"> 
-                    <h3 class="text-center m-t-10 text-white"><strong>Phoenix Admin</strong> </h3>
+                <div class="panel-heading text-center"> 
+                    <img src="<%= static_path(@conn, "/images/logo.png") %>" alt="user-img" height=40">
+                    <h3 class=" m-t-10 text-white"><strong>Phoenix Admin</strong> </h3>
                 </div> 
 
 

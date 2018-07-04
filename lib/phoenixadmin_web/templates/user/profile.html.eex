@@ -104,53 +104,17 @@
                                     <div class="panel-body"> 
                                         <div class="timeline-2">
                                             <%= for log <- @logs do %>
+                                            <% use Timex %>
                                         <div class="time-item">
                                             <div class="item-info">
-                                                <div class="text-muted">test</div>
+                                                
+                                                <% {:ok, relative_str} = Timex.shift(log.inserted_at, minutes: -3) |> Timex.format("{relative}", :relative) %>
+                                                <div class="text-muted"><%= relative_str %></div>
                                                 <p><strong><a href="/admin/activity/<%= log.id %>" class="text-info">You</a></strong> <%= log.activity %></p>
                                             </div>
                                         </div>
 
                                             <% end %>
-
-                                        <div class="time-item">
-                                            <div class="item-info">
-                                                <div class="text-muted">30 minutes ago</div>
-                                                <p><a href="" class="text-info">Lorem</a> commented your post.</p>
-                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="time-item">
-                                            <div class="item-info">
-                                                <div class="text-muted">59 minutes ago</div>
-                                                <p><a href="" class="text-info">Jessi</a> attended a meeting with<a href="#" class="text-success">John Doe</a>.</p>
-                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="time-item">
-                                            <div class="item-info">
-                                                <div class="text-muted">5 minutes ago</div>
-                                                <p><strong><a href="#" class="text-info">John Doe</a></strong>Uploaded 2 new photos</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="time-item">
-                                            <div class="item-info">
-                                                <div class="text-muted">30 minutes ago</div>
-                                                <p><a href="" class="text-info">Lorem</a> commented your post.</p>
-                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="time-item">
-                                            <div class="item-info">
-                                                <div class="text-muted">59 minutes ago</div>
-                                                <p><a href="" class="text-info">Jessi</a> attended a meeting with<a href="#" class="text-success">John Doe</a>.</p>
-                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     </div> 
