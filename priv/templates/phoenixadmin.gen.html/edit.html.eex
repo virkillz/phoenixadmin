@@ -1,4 +1,13 @@
-<h2>Edit <%= schema.human_singular %></h2>
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="pull-left page-title">Edit <%= schema.human_singular %></h4>
+        <ol class="breadcrumb pull-right">
+            <li><a href="/">Phoenix Admin</a></li>
+            <li><a href="/#"><%= schema.human_singular %></a></li>
+            <li class="active">Edit</li>
+        </ol>
+    </div>
+</div>
 
 <%%= render "form.html", Map.put(assigns, :action, <%= schema.route_helper %>_path(@conn, :update, @<%= schema.singular %>)) %>
 
