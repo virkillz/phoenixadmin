@@ -1,6 +1,6 @@
 # Phoenixadmin
 
-Many project require admin panel. This is a simple boilerplate for admin panel using phoenix. It already have user authentication. And modified HTML generator to make it slightly nicer. It can save me several hour everytime I need to do admin portal.
+Many project require admin panel. This is a simple boilerplate for admin panel using phoenix. It already have user authentication. And modified HTML generator to make it slightly nicer. 
 
 ![Screenshot](https://s33.postimg.cc/4h4nkj89b/Screen_Shot_2018-07-04_at_2.49.57_PM.png)
 
@@ -17,4 +17,26 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 
-How 
+Add other data!
+You can start do the regular way, using generator or such. For example:
+
+`mix phx.gen.html Content Post post title:string content:string is_published:boolean`
+
+Put `resources "/post", PostController` in the router `/lib/Yourapp_web/router.ex`
+
+Run migration `mix ecto.migrate`
+
+Add link to your menu at '/lib/Yourapp_web/templates/layout/app.html.eex'
+
+Now you got CMS!
+
+
+I know its not a lot. Just spend half day doing this. But It cound save me hours everytime I need admin panel.
+
+
+
+TODO LIST:
+- [ ] Sign in - sign out activity record
+- [ ] Modify generated template
+- [ ] Fix activity display and remove delete button
+- [ ] Boilerplate for notification, probably use channel?
