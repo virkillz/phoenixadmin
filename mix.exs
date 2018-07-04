@@ -44,7 +44,8 @@ defmodule Phoenixadmin.Mixfile do
       {:secure_random, "~> 0.5"},
       {:guardian, "~> 1.0"},
       {:comeonin, "~> 4.0"},
-      {:bcrypt_elixir, "~> 1.0"}
+      {:bcrypt_elixir, "~> 1.0"},
+      {:timex, "~> 3.0"}
     ]
   end
 

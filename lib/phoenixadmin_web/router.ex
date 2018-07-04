@@ -29,8 +29,9 @@ defmodule PhoenixadminWeb.Router do
     get "/", UserController, :dashboard
     get "/profile", UserController, :profile
     get "/locked", UserController, :locked
-    resources "/activity", ActivityController
+    resources "/activity", ActivityController, only: [:index, :show, :delete]
     resources "/user", UserController
+    get "/logout", UserController, :logout 
   end
 
 
@@ -39,8 +40,7 @@ defmodule PhoenixadminWeb.Router do
 
     get "/", UserController, :redirector
     get "/login", UserController, :login
-    post "/login", UserController, :auth
-    get "/logout", UserController, :logout    
+    post "/login", UserController, :auth   
   end
 
 

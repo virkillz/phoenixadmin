@@ -1,6 +1,7 @@
 defmodule PhoenixadminWeb.UserController do
   use PhoenixadminWeb, :controller
 
+  alias Phoenixadmin.Logging
   alias Phoenixadmin.Account
   alias Phoenixadmin.Account.User
   alias Phoenixadmin.Auth.Guardian
@@ -17,7 +18,6 @@ defmodule PhoenixadminWeb.UserController do
 
 
   def create(conn, %{"user" => user_params}) do
-    IO.inspect(user_params)
     if upload = user_params["avatar"] do
       extension = Path.extname(upload.filename)
       randomname = Ecto.UUID.generate |> binary_part(16,16)
@@ -46,7 +46,6 @@ defmodule PhoenixadminWeb.UserController do
 
 
   def edit(conn, %{"id" => id}) do
-    IO.inspect(conn)
     user = Account.get_user!(id)
     changeset = Account.change_user(user)
     render(conn, "edit.html", user: user, changeset: changeset)
@@ -92,12 +91,12 @@ defmodule PhoenixadminWeb.UserController do
   end
 
   def auth(conn, %{"username" => user, "password" => password}) do
+    [ browser ] = Plug.Conn.get_req_header(conn, "user-agent")
   case Account.authenticate_user(user, password) do
     {:ok, user} ->
-      Phoenixadmin.Logging.create_activity(%{"user_id"=> user.id, "activity" => "sign in"})
+      Logging.create_activity(%{"user_id"=> user.id, "activity" => "User sign in from #{browser}"})
       conn
       |> Guardian.login(user)
-      |> IO.inspect
       |> put_flash(:info, "Welcome back, #{user.fullname}! You look so damn handsome today.")
       |> redirect(to: user_path(conn, :dashboard))
     {:error, reason} ->
@@ -109,6 +108,8 @@ defmodule PhoenixadminWeb.UserController do
   end
 
   def logout(conn, _) do
+    user = Guardian.Plug.current_resource(conn)
+    Logging.create_activity(%{"user_id"=> user.id, "activity" => "User sign out."})
     conn
     |> Guardian.logout()
     |> redirect(to: user_path(conn, :login))
@@ -133,7 +134,8 @@ defmodule PhoenixadminWeb.UserController do
     id = conn.private.guardian_default_resource.id
     user = Account.get_user!(id)
     changeset = Account.change_user(user)
-    render(conn, "profile.html", user: user, changeset: changeset)
+    histories = Logging.get_last_x_activity(5,user.id)
+    render(conn, "profile.html", logs: histories, user: user, changeset: changeset)
   end
 
     def redirector(conn, _) do

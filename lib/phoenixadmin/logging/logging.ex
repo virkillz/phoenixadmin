@@ -21,6 +21,11 @@ defmodule Phoenixadmin.Logging do
     Repo.all(Activity)
   end
 
+
+  def get_last_x_activity(amount, user_id) do
+    Repo.all(from a in Activity, where: a.user_id == ^user_id, order_by: [desc: a.id], limit: ^amount)
+  end
+
   @doc """
   Gets a single activity.
 

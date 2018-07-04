@@ -142,7 +142,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="/admin/profile"><i class="md md-face-unlock"></i> Profile</a></li>
                                         <li><a href="/admin/locked"><i class="md md-lock"></i> Lock screen</a></li>
-                                        <li><a href="/logout"><i class="md md-settings-power"></i> Logout</a></li>
+                                        <li><a href="/admin/logout"><i class="md md-settings-power"></i> Logout</a></li>
                                     </ul>
                                 </li>
 
@@ -169,7 +169,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="/admin/profile"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>
                                     <li><a href="/admin/locked"><i class="md md-lock"></i> Lock screen</a></li>
-                                    <li><a href="/logout"><i class="md md-settings-power"></i> Logout</a></li>
+                                    <li><a href="/admin/logout"><i class="md md-settings-power"></i> Logout</a></li>
                                 </ul>
                             </div>
                             
@@ -182,12 +182,14 @@
                             <li>
                                 <a href="/admin" class="waves-effect"><i class="md md-home"></i><span> Dashboard </span></a>
                             </li>
-                            <li>
-                                <a href="/admin/activity" class="waves-effect"><i class="md md-home"></i><span> Activity </span></a>
-                            </li>                            
-                            <li>
-                                <a href="/admin/user" class="waves-effect"><i class="md md-group"></i><span> User Portal </span></a>
-                            </li>                                                        
+                            <li class="has_sub">
+                                <a href="#" class="waves-effect"><i class="md md-view-list"></i><span> Portal Management </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="/admin/activity">Activity Monitor</a></li>
+                                    <li><a href="/admin/user">User Management</a></li>
+                                </ul>
+                            </li>
+
                         </ul>
                         <div class="clearfix"></div>
                     </div>

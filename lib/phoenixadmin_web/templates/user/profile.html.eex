@@ -103,12 +103,15 @@
                                     
                                     <div class="panel-body"> 
                                         <div class="timeline-2">
+                                            <%= for log <- @logs do %>
                                         <div class="time-item">
                                             <div class="item-info">
-                                                <div class="text-muted">5 minutes ago</div>
-                                                <p><strong><a href="#" class="text-info">John Doe</a></strong> Uploaded a photo <strong>"DSC000586.jpg"</strong></p>
+                                                <div class="text-muted">test</div>
+                                                <p><strong><a href="/admin/activity/<%= log.id %>" class="text-info">You</a></strong> <%= log.activity %></p>
                                             </div>
                                         </div>
+
+                                            <% end %>
 
                                         <div class="time-item">
                                             <div class="item-info">

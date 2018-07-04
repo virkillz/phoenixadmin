@@ -13,7 +13,7 @@ defmodule Phoenixadmin.Logging.Activity do
   @doc false
   def changeset(activity, attrs) do
     activity
-    |> cast(attrs, [:activity])
-    |> validate_required([:activity])
+    |> cast(attrs, [:activity, :user_id])
+    |> validate_required([:activity, :user_id])
   end
 end

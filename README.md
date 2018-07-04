@@ -4,7 +4,7 @@ Many project require admin panel. This is a simple boilerplate for admin panel u
 
 ![Screenshot](https://s33.postimg.cc/4h4nkj89b/Screen_Shot_2018-07-04_at_2.49.57_PM.png)
 
-To start your Phoenix server:
+## To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
   * Check your database setting at `config/dev.exs` and match your postgresql credential
@@ -17,7 +17,7 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 
-Add other data!
+## Add other data!
 You can start do the regular way, using generator or such. For example:
 
 `mix phx.gen.html Content Post post title:string content:string is_published:boolean`
@@ -29,6 +29,7 @@ Run migration `mix ecto.migrate`
 Add link to your menu at '/lib/Yourapp_web/templates/layout/app.html.eex'
 
 Now you got CMS!
+
 
 
 I know its not a lot. Just spend half day doing this. But It cound save me hours everytime I need admin panel.
