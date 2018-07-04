@@ -1,0 +1,238 @@
+<div class="wraper container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="bg-picture text-center" style="background-image:url('images/big/bg.jpg')">
+                                <div class="bg-picture-overlay"></div>
+                                <div class="profile-info-name">
+                                    <img src="<%= static_path(@conn, @conn.private.guardian_default_resource.avatar) %>" class="thumb-lg img-circle img-thumbnail" alt="profile-image">
+                                    <h3 class="text-white"><%= @conn.private.guardian_default_resource.fullname %></h3>
+                                </div>
+                            </div>
+                            <!--/ meta -->
+                        </div>
+                    </div>
+                    <div class="row user-tabs">
+                        <div class="col-lg-6 col-md-9 col-sm-9">
+                            <ul class="nav nav-tabs tabs">
+                            <li class="active tab">
+                                <a href="#home-2" data-toggle="tab" aria-expanded="false" class="active"> 
+                                    <span class="visible-xs"><i class="fa fa-home"></i></span> 
+                                    <span class="hidden-xs">About Me</span> 
+                                </a> 
+                            </li> 
+                            <li class="tab"> 
+                                <a href="#profile-2" data-toggle="tab" aria-expanded="false"> 
+                                    <span class="visible-xs"><i class="fa fa-user"></i></span> 
+                                    <span class="hidden-xs">Activities</span> 
+                                </a> 
+                            </li> 
+                            <li class="tab" > 
+                                <a href="#settings-2" data-toggle="tab" aria-expanded="false"> 
+                                    <span class="visible-xs"><i class="fa fa-cog"></i></span> 
+                                    <span class="hidden-xs">Settings</span> 
+                                </a> 
+                            </li> 
+                        <div class="indicator"></div></ul> 
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12"> 
+                        
+                        <div class="tab-content profile-tab-content"> 
+                            <div class="tab-pane active" id="home-2"> 
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <!-- Personal-Information -->
+                                        <div class="panel panel-default panel-fill">
+                                            <div class="panel-heading"> 
+                                                <h3 class="panel-title">Personal Information</h3> 
+                                            </div> 
+                                            <div class="panel-body"> 
+                                                <div class="about-info-p">
+                                                    <strong>Full Name</strong>
+                                                    <br/>
+                                                    <p class="text-muted"><%= @conn.private.guardian_default_resource.fullname %></p>
+                                                </div>
+                                                <div class="about-info-p">
+                                                    <strong>Mobile</strong>
+                                                    <br/>
+                                                    <p class="text-muted"><%= @conn.private.guardian_default_resource.mobile %></p>
+                                                </div>
+                                                <div class="about-info-p">
+                                                    <strong>Email</strong>
+                                                    <br/>
+                                                    <p class="text-muted"><%= @conn.private.guardian_default_resource.email %></p>
+                                                </div>
+                                                <div class="about-info-p m-b-0">
+                                                    <strong>Location</strong>
+                                                    <br/>
+                                                    <p class="text-muted"><%= @conn.private.guardian_default_resource.location %></p>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <!-- Personal-Information -->
+
+
+                                    </div>
+
+
+                                    <div class="col-md-8">
+                                        <!-- Personal-Information -->
+                                        <div class="panel panel-default panel-fill">
+                                            <div class="panel-heading"> 
+                                                <h3 class="panel-title">Biography</h3> 
+                                            </div> 
+                                            <div class="panel-body"> 
+                                                <%= @user.bio %>
+                                            </div> 
+                                        </div>
+                                        <!-- Personal-Information -->
+
+                                    </div>
+
+                                </div>
+                            </div> 
+
+
+
+
+                            <div class="tab-pane" id="profile-2">
+                                <!-- Personal-Information -->
+                                <div class="panel panel-default panel-fill">
+                                    
+                                    <div class="panel-body"> 
+                                        <div class="timeline-2">
+                                        <div class="time-item">
+                                            <div class="item-info">
+                                                <div class="text-muted">5 minutes ago</div>
+                                                <p><strong><a href="#" class="text-info">John Doe</a></strong> Uploaded a photo <strong>"DSC000586.jpg"</strong></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="time-item">
+                                            <div class="item-info">
+                                                <div class="text-muted">30 minutes ago</div>
+                                                <p><a href="" class="text-info">Lorem</a> commented your post.</p>
+                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="time-item">
+                                            <div class="item-info">
+                                                <div class="text-muted">59 minutes ago</div>
+                                                <p><a href="" class="text-info">Jessi</a> attended a meeting with<a href="#" class="text-success">John Doe</a>.</p>
+                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="time-item">
+                                            <div class="item-info">
+                                                <div class="text-muted">5 minutes ago</div>
+                                                <p><strong><a href="#" class="text-info">John Doe</a></strong>Uploaded 2 new photos</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="time-item">
+                                            <div class="item-info">
+                                                <div class="text-muted">30 minutes ago</div>
+                                                <p><a href="" class="text-info">Lorem</a> commented your post.</p>
+                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="time-item">
+                                            <div class="item-info">
+                                                <div class="text-muted">59 minutes ago</div>
+                                                <p><a href="" class="text-info">Jessi</a> attended a meeting with<a href="#" class="text-success">John Doe</a>.</p>
+                                                <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod. "</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </div> 
+                                </div>
+                                <!-- Personal-Information -->
+                            </div> 
+
+
+                               <div class="tab-pane" id="settings-2">
+                                                                <!-- Personal-Information -->
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h3 class="panel-title">EDIT profile</h3> 
+                                      </div>
+                                      <div class="panel-body">
+                                <%= form_for @changeset, user_path(@conn, :update, @user),[multipart: true], fn f -> %>
+                                  <%= if @changeset.action do %>
+                                    <div class="alert alert-danger">
+                                      <p>Oops, something went wrong! Please check the errors below.</p>
+                                    </div>
+                                  <% end %>
+
+                                  <div class="form-group">
+                                    <%= label f, :fullname, class: "control-label" %>
+                                    <%= text_input f, :fullname, class: "form-control" %>
+                                    <%= error_tag f, :fullname %>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <%= label f, :username, class: "control-label" %>
+                                    <%= text_input f, :username, class: "form-control" %>
+                                    <%= error_tag f, :username %>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <%= label f, :avatar, class: "control-label" %>
+                                    <%= file_input f, :avatar, class: "form-control" %>
+                                    <%= error_tag f, :avatar %>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <%= label f, :role, class: "control-label" %>
+                                    <%= text_input f, :role, class: "form-control" %>
+                                    <%= error_tag f, :role %>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <%= label f, :is_active, class: "control-label" %>
+                                    <%= checkbox f, :is_active, class: "checkbox" %>
+                                    <%= error_tag f, :is_active %>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <%= label f, :email, class: "control-label" %>
+                                    <%= text_input f, :email, class: "form-control" %>
+                                    <%= error_tag f, :email %>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <%= label f, :mobile, class: "control-label" %>
+                                    <%= text_input f, :mobile, class: "form-control" %>
+                                    <%= error_tag f, :mobile %>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <%= label f, :location, class: "control-label" %>
+                                    <%= text_input f, :location, class: "form-control" %>
+                                    <%= error_tag f, :location %>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <%= label f, "About me", class: "control-label" %>
+                                    <%= textarea f, :bio, class: "form-control" %>
+                                    <%= error_tag f, :bio %>
+                                  </div>  
+
+                                  <div class="form-group">
+                                    <%= submit "Submit", class: "btn btn-primary" %>
+                                  </div>
+                                <% end %>
+
+                                </div>
+                                </div>
+                            </div> 
+                        </div> 
+                    </div>
+                    </div>
+                </div> <!-- container -->

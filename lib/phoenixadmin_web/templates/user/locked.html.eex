@@ -1,0 +1,30 @@
+        <div class="wrapper-page">
+            <div class="panel panel-color panel-primary panel-pages">
+
+                <div class="panel-heading bg-img"> 
+                    <div class="bg-overlay"></div>
+                    <h3 class="text-center m-t-10 text-white">&nbsp;</h3>
+                </div> 
+
+                <div class="panel-body" style="padding-top:0px;">
+                    <%= form_for @changeset, "/login", [class: "form-horizontal text-center"], fn f -> %>                      
+                    <div class="user-thumb"> 
+                        <img src="<%= static_path(@conn, @avatar) %>" class="img-responsive img-circle img-thumbnail" alt="thumbnail">
+                    </div> 
+                    <div class="form-group"> 
+                        <h3><%= @name %></h3> 
+                        <p class="text-muted">Enter your password to access the admin.</p> 
+                        <div class="input-group m-t-30"> 
+                            <input type="hidden" name="username" class="form-control input-lg" value="<%= @username %>"> 
+                            <input type="password" name="password" class="form-control input-lg" placeholder="Password"> 
+                            <span class="input-group-btn"> <button type="submit" class="btn btn-primary btn-lg waves-effect waves-light">Log In</button> </span> 
+                        </div> 
+                    </div> 
+                    <div class="text-right">
+                        <a href="/login">Not <%= @name %> ?</a>
+                    </div>       
+                <% end %>  
+                </div>                                 
+                
+            </div>
+        </div>

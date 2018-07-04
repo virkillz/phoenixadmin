@@ -1,0 +1,40 @@
+<h1>Dashboard</h1>
+                        <!--Widget-4 -->
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-lg-3">
+                                <div class="mini-stat clearfix bx-shadow">
+                                    <span class="mini-stat-icon bg-info"><i class="md md-attach-money"></i></span>
+                                    <div class="mini-stat-info text-right text-muted">
+                                        <span class="counter">15852</span>
+                                        Total Sales Count
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-lg-3">
+                                <div class="mini-stat clearfix bx-shadow">
+                                    <span class="mini-stat-icon bg-warning"><i class="md md-attach-money"></i></span>
+                                    <div class="mini-stat-info text-right text-muted">
+                                        <span class="counter">956</span>
+                                        Eload Sales Count
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-lg-3">
+                                <div class="mini-stat clearfix bx-shadow">
+                                    <span class="mini-stat-icon bg-pink"><i class="md md-attach-money"></i></span>
+                                    <div class="mini-stat-info text-right text-muted">
+                                        <span class="counter">5210</span>
+                                        Epin Sales Count
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-lg-3">
+                                <div class="mini-stat clearfix bx-shadow">
+                                    <span class="mini-stat-icon bg-success"><i class="md md-attach-money"></i></span>
+                                    <div class="mini-stat-info text-right text-muted">
+                                        <span class="counter">20544</span>
+                                        Total Revenue
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- End row-->

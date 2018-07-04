@@ -1,0 +1,26 @@
+<h2>Listing Activity</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Activity</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for activity <- @activity do %>
+    <tr>
+      <td><%= activity.activity %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: activity_path(@conn, :show, activity), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: activity_path(@conn, :edit, activity), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: activity_path(@conn, :delete, activity), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Activity", to: activity_path(@conn, :new) %></span>

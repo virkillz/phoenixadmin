@@ -1,0 +1,66 @@
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <h2 class="pull-left page-title">User List</h2>
+        <ol class="breadcrumb pull-right">
+            <li><a href="/">Phoenix Admin</a></li>
+            <li><a href="#">User</a></li>
+            <li class="active">Index</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a href="/admin/user/new"><button class="btn btn-primary waves-effect waves-light m-b-5"> <span>Create New User</span> </button> </a>                                        
+            </div>          
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                  <th>Fullname</th>
+                                  <th>Username</th>
+                                  <th>Password</th>
+                                  <th>Avatar</th>
+                                  <th>Role</th>
+                                  <th>Is active</th>
+                                  <th>Bio</th>
+                                  <th>Email</th>
+                                  <th>Mobile</th>
+                                  <th>Location</th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+                                <%= for user <- @user do %>
+                                    <tr>
+                                      <td><%= user.fullname %></td>
+                                      <td><%= user.username %></td>
+                                      <td><%= user.password %></td>
+                                      <td><%= user.avatar %></td>
+                                      <td><%= user.role %></td>
+                                      <td><%= user.is_active %></td>
+                                      <td><%= user.bio %></td>
+                                      <td><%= user.email %></td>
+                                      <td><%= user.mobile %></td>
+                                      <td><%= user.location %></td>
+
+                                      <td class="text-right">
+                                        <span><%= link "Show", to: user_path(@conn, :show, user), class: "btn btn-default btn-xs" %></span>
+                                        <span><%= link "Edit", to: user_path(@conn, :edit, user), class: "btn btn-default btn-xs" %></span>
+                                        <span><%= link "Delete", to: user_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+                                      </td>
+                                    </tr>
+                                <% end %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End row -->
