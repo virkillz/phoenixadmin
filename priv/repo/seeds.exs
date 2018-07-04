@@ -9,3 +9,13 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Phoenixadmin.Repo
+alias Phoenixadmin.Account.User
+
+  Repo.insert! %User{
+    fullname: "Michael Admin",
+    username: "administrator",
+    password_hash: "$2b$12$8As.fIX4fQsbZuhcIhKr7OU3fqxaaPsfYuFZ/S6fUEDd2HDkzN.Tu",
+    avatar: "/images/default.png"
+  }

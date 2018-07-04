@@ -136,4 +136,10 @@ defmodule PhoenixadminWeb.UserController do
     render(conn, "profile.html", user: user, changeset: changeset)
   end
 
+    def redirector(conn, _) do
+    conn
+    |> put_flash(:info, "You need to login first.")
+    |> redirect(to: user_path(conn, :login))
+  end
+
 end

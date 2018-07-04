@@ -37,6 +37,7 @@ defmodule PhoenixadminWeb.Router do
   scope "/", PhoenixadminWeb do
     pipe_through :browser
 
+    get "/", UserController, :redirector
     get "/login", UserController, :login
     post "/login", UserController, :auth
     get "/logout", UserController, :logout    
