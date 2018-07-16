@@ -2,6 +2,8 @@
 
 Many project require admin panel. This is a simple boilerplate for admin panel using phoenix. It already have user authentication. And modified HTML generator to make it slightly nicer. 
 
+Everytime you need a project which require backend admin portal, clone this and continue. Save several hours of mine.
+
 ![Screenshot](https://s33.postimg.cc/4h4nkj89b/Screen_Shot_2018-07-04_at_2.49.57_PM.png)
 
 ## To start your Phoenix server:
@@ -21,6 +23,12 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 You can start do the regular way, using generator or such. For example:
 
 `mix phx.gen.html Content Post post title:string content:string is_published:boolean`
+
+OR 
+
+`mix phoenixadmin.gen.html Content Post post title:string content:string is_published:boolean`
+
+The later one will give nicer html output.
 
 Put `resources "/post", PostController` in the router `/lib/Yourapp_web/router.ex`
 
