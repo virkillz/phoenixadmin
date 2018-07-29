@@ -14,7 +14,8 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <a href="/admin/user/new"><button class="btn btn-primary waves-effect waves-light m-b-5"> <span>Create New User</span> </button> </a>                                        
+                <a href="/admin/user/new" class = "btn btn-success waves-effect waves-light btn-rounded pull-right m-b-5"><i class="fa fa-plus"></i> <span>Create New User</span></a>  
+                <h3 class="panel-title">User List</h3>                                                      
             </div>          
             <div class="panel-body">
                 <div class="row">

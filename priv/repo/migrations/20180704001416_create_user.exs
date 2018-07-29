@@ -5,7 +5,6 @@ defmodule Phoenixadmin.Repo.Migrations.CreateUser do
     create table(:user) do
       add :fullname, :string
       add :username, :string
-      add :password, :string
       add :password_hash, :string
       add :avatar, :string
       add :role, :string

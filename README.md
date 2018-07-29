@@ -45,7 +45,7 @@ I know its not a lot. Just spend half day doing this. But It cound save me hours
 
 
 TODO LIST:
-- [ ] Sign in - sign out activity record
-- [ ] Modify generated template
-- [ ] Fix activity display and remove delete button
 - [ ] Boilerplate for notification, probably use channel?
+- [ ] Add modal as quick view button?
+- [ ] Ability to change password
+- [ ] Show user need to be better
