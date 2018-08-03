@@ -70,6 +70,7 @@ defmodule PhoenixadminWeb.UserController do
         |> put_flash(:info, "User updated successfully.")
         |> redirect(to: user_path(conn, :show, user))
       {:error, %Ecto.Changeset{} = changeset} ->
+        IO.inspect(changeset)
         render(conn, "edit.html", user: user, changeset: changeset)
     end
   end

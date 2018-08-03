@@ -49,3 +49,4 @@ TODO LIST:
 - [ ] Add modal as quick view button?
 - [ ] Ability to change password
 - [ ] Show user need to be better
+- [ ] Ensure upload avatar works

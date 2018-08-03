@@ -1,68 +1,140 @@
-<h2>Show User</h2>
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="pull-left page-title">Show User</h4>
+        <ol class="breadcrumb pull-right">
+            <li><a href="/">Phoenix Admin</a></li>
+            <li><a href="/#">User</a></li>
+            <li class="active">Show</li>
+        </ol>
+    </div>
+</div>
 
-<ul>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                  <a href="<%= user_path(@conn, :edit, @user) %>"><button class="btn btn-warning waves-effect waves-light m-b-5 btn-rounded pull-right"> <i class="fa fa-edit"></i> <span>Edit Info</span></button></a>               
+              <h3 class="panel-title">User Information </h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form">                                    
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Fullname:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.fullname %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Fullname:</strong>
-    <%= @user.fullname %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Username:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.username %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Username:</strong>
-    <%= @user.username %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Password:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.password %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Password:</strong>
-    <%= @user.password %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Password hash:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.password_hash %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Password hash:</strong>
-    <%= @user.password_hash %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Avatar:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.avatar %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Avatar:</strong>
-    <%= @user.avatar %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Role:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.role %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Role:</strong>
-    <%= @user.role %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Is active:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.is_active %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Is active:</strong>
-    <%= @user.is_active %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Bio:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.bio %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Bio:</strong>
-    <%= @user.bio %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Email:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.email %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Email:</strong>
-    <%= @user.email %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Mobile:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.mobile %>
+                        </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Mobile:</strong>
-    <%= @user.mobile %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Bio:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                        <%= @user.bio %>
+                      </p>
+                      </div>
+                  </div>   
 
-  <li>
-    <strong>Bio:</strong>
-    <%= @user.bio %>
-  </li>
+                  <div class="form-group">
+                      <label class="col-sm-2 control-label">Location:</label>
+                      <div class="col-sm-10">
+                        <p class="form-control-static">
+                          <%= @user.location %>
+                        </p>
+                      </div>
+                  </div>  
+                    <div class="form-group">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                          <a href="<%= user_path(@conn, :index) %>" class="btn btn-primary">Close</a>
+                        </div>
+                    </div>                                                                                                                         
+                </form>
+            </div> <!-- panel-body -->
+        </div> <!-- panel -->
+    </div> <!-- col -->
+</div> <!-- End row -->
 
-  <li>
-    <strong>Location:</strong>
-    <%= @user.location %>
-  </li>
 
-</ul>
-
-<span><%= link "Edit", to: user_path(@conn, :edit, @user) %></span>
-<span><%= link "Back", to: user_path(@conn, :index) %></span>

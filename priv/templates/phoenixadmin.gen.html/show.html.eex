@@ -9,14 +9,35 @@
     </div>
 </div>
 
-<ul>
-<%= for {k, _} <- schema.attrs do %>
-  <li>
-    <strong><%= Phoenix.Naming.humanize(Atom.to_string(k)) %>:</strong>
-    <%%= @<%= schema.singular %>.<%= k %> %>
-  </li>
-<% end %>
-</ul>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                  <a href="<%%= <%= schema.route_helper %>_path(@conn, :edit, @<%= schema.singular %>) %>"><button class="btn btn-success waves-effect waves-light m-b-5 btn-rounded pull-right"> <i class="fa fa-edit"></i> <span>Edit Info</span></button></a>                  
+                <h3 class="panel-title"><%= schema.human_singular %> Information </h3>
 
-<span><%%= link "Edit", to: <%= schema.route_helper %>_path(@conn, :edit, @<%= schema.singular %>) %></span>
-<span><%%= link "Back", to: <%= schema.route_helper %>_path(@conn, :index) %></span>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form">  
+
+                    <%= for {k, _} <- schema.attrs do %>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label"><%= Phoenix.Naming.humanize(Atom.to_string(k)) %>:</label>
+                          <div class="col-sm-10">
+                          <p class="form-control-static"><%%= @<%= schema.singular %>.<%= k %> %></p>
+                          </div>
+                        </div>  
+                    <% end %>
+
+                    <div class="form-group">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                          <a href="<%%= <%= schema.route_helper %>_path(@conn, :index) %>" class="btn btn-primary">Close</a>
+                        </div>
+                    </div>                                                                                                                         
+                </form>
+            </div> <!-- panel-body -->
+        </div> <!-- panel -->
+    </div> <!-- col -->
+</div> <!-- End row -->
+

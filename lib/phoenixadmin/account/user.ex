@@ -24,8 +24,8 @@ defmodule Phoenixadmin.Account.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:fullname, :username, :password, :repassword, :password_hash, :avatar, :role, :is_active, :email, :mobile, :bio, :location])
-    |> validate_required([:fullname, :username, :password, :avatar ])
+    |> cast(attrs, [:fullname, :username, :avatar, :role, :is_active, :email, :mobile, :bio, :location])
+    |> validate_required([:fullname, :username, :avatar ])
   end
 
 
