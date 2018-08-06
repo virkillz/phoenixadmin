@@ -15,7 +15,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">  
 
-                <a href="<%%= <%= schema.route_helper %>_path(@conn, :new) %>" class = "btn btn-success waves-effect waves-light btn-rounded pull-right m-b-5"><i class="fa fa-plus"></i> <span>Create New <%= schema.human_singular %></span></a>  
+                <a href="<%%= schema.route_helper %>_path(@conn, :new) %>" class = "btn btn-success waves-effect waves-light btn-rounded pull-right m-b-5"><i class="fa fa-plus"></i> <span>Create New <%= schema.human_singular %></span></a>  
                 <h3 class="panel-title"><%= schema.human_singular %> List</h3>                                                      
             </div>          
             <div class="panel-body">

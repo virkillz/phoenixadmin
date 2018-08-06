@@ -16,6 +16,7 @@
 <% end %>
   <div class="form-group">
     <%%= submit "Submit", class: "btn btn-primary" %>
+    <span><%%= link "Cancel", to: <%= schema.route_helper %>_path(@conn, :index), class: "btn btn-warning" %></span>
   </div>
 <%% end %>
 </div>
