@@ -40,9 +40,6 @@ Now you got CMS!
 
 
 
-I know its not a lot. Just spend half day doing this. But It cound save me hours everytime I need admin panel.
-
-
 
 TODO LIST:
 - [ ] Boilerplate for notification, probably use channel?
